@@ -1,0 +1,41 @@
+
+/*When the width reaches 600px, stack them in one column */
+@media (max-width: 600px) {
+    .div1 {
+      grid-template-columns: 1fr; /* Stack items in one column */
+    }
+  }
+
+  .div1 {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "main sidebar sidebar"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(3, 200px);
+    gap: 20px;
+    
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: rgb(21, 224, 72);
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: rgb(219, 40, 124);
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: rgb(247, 140, 0);
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: aquamarine;
+  }
+  
+  
